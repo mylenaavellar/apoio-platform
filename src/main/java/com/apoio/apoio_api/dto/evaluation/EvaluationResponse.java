@@ -18,7 +18,7 @@ public record EvaluationResponse(
     UUID userId,
     UUID urbanProjectId
 ) {
-    public EvaluationResponse fromEntity(Evaluation evaluation) {
+    public static EvaluationResponse fromEntity(Evaluation evaluation) {
         return new EvaluationResponse(
             evaluation.getId(),
             evaluation.getComfortScore(),
