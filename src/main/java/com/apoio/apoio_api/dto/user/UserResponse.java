@@ -3,6 +3,7 @@ package com.apoio.apoio_api.dto.user;
 import com.apoio.apoio_api.entity.User;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 // Outgoing data returned to the user or client
@@ -14,7 +15,9 @@ public record UserResponse(
     String phone,
     String profession,
     LocalDate birthDate,
-    String role
+    String role,
+    LocalDateTime createdAt,
+    LocalDateTime updatedAt
 ) {
     public static UserResponse fromEntity(User user) {
         return new UserResponse(
@@ -25,7 +28,9 @@ public record UserResponse(
             user.getPhone(),
             user.getProfession(),
             user.getBirthDate(),
-            user.getRole()
+            user.getRole(),
+            user.getCreatedAt(),
+            user.getUpdatedAt()
         );
     }
 }
