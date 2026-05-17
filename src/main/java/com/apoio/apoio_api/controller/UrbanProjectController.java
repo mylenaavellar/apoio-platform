@@ -42,7 +42,7 @@ public class UrbanProjectController {
     public ResponseEntity<List<UrbanProjectResponse>> getAllUrbanProjects() {
         List<UrbanProjectResponse> responses = urbanProjectService.getAllUrbanProjects().stream()
                 .map(UrbanProjectResponse::fromEntity)
-                .collect(Collectors.toList());
+                .toList();
 
         return ResponseEntity.ok(responses);
     }
@@ -56,6 +56,7 @@ public class UrbanProjectController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteUrbanProject(@PathVariable UUID id) {
+
         urbanProjectService.deleteUrbanProject(id);
 
         return ResponseEntity.noContent().build();

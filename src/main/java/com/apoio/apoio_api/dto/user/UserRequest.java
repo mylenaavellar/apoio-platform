@@ -31,8 +31,8 @@ public record UserRequest(
     }
 
     public void toEntityUpdate(User userFromDb) {
-        userFromDb.setName(this.name());
-        userFromDb.setPhone(this.phone());
-        userFromDb.setProfession(this.profession());
+        userFromDb.setName(name());
+        userFromDb.setPhone(phone());
+        userFromDb.setProfession(profession());
     }
 }

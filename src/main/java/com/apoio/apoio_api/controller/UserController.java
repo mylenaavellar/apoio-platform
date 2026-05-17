@@ -34,6 +34,7 @@ public class UserController {
     @GetMapping("/{id}")
     public ResponseEntity<UserResponse> getUserById(@PathVariable UUID id) {
         User user = userService.getUserById(id);
+
         return ResponseEntity.ok(UserResponse.fromEntity(user));
     }
 
@@ -41,7 +42,7 @@ public class UserController {
     public ResponseEntity<List<UserResponse>> getAllUsers() {
         List<UserResponse> responses = userService.getAllUsers().stream()
                 .map(UserResponse::fromEntity)
-                .collect(Collectors.toList());
+                .toList();
 
         return ResponseEntity.ok(responses);
     }
@@ -56,6 +57,7 @@ public class UserController {
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteUser(@PathVariable UUID id) {
         userService.deleteUser(id);
+
         return ResponseEntity.noContent().build();
     }
 }
