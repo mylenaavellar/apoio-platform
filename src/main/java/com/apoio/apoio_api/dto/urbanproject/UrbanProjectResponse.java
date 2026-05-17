@@ -11,7 +11,7 @@ public record UrbanProjectResponse(
     String department,
     LocalDate openingDate,
     double latitude,
-double longitude
+    double longitude
 ) {
     public static UrbanProjectResponse fromEntity(UrbanProject project) {
         return new UrbanProjectResponse(
