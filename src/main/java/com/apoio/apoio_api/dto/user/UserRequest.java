@@ -18,14 +18,14 @@ public record UserRequest(
 ) {
     public User toEntity() {
         User user = new User();
-        user.setName(this.name());
-        user.setUsername(this.username());
-        user.setPassword(this.password());
-        user.setEmail(this.email());
-        user.setPhone(this.phone());
-        user.setProfession(this.profession());
-        user.setBirthDate(this.birthDate());
-        user.setRole(this.role());
+        user.setName(name());
+        user.setUsername(username());
+        user.setPassword(password());
+        user.setEmail(email());
+        user.setPhone(phone());
+        user.setProfession(profession());
+        user.setBirthDate(birthDate());
+        user.setRole(role());
 
         return user;
     }
