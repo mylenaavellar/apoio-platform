@@ -29,6 +29,7 @@ public class UserService {
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }
+
     public User updateUser(UUID id, UserRequest userDetails) {
         User userFromDb = getUserById(id);
 
