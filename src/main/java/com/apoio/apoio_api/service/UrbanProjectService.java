@@ -30,11 +30,11 @@ public class UrbanProjectService {
     }
 
     public UrbanProject updateUrbanProject(UUID id, UrbanProjectRequest projectDetails) {
-        UrbanProject projectFromDb = getUrbanProjectById(id);
+        getUrbanProjectById(id);
 
-        projectDetails.toEntity(projectFromDb);
+        UrbanProject updatedProject = projectDetails.toEntity(id);
 
-        return urbanProjectRepository.save(projectFromDb);
+        return urbanProjectRepository.save(updatedProject);
     }
 
     public void deleteUrbanProject(UUID id) {
