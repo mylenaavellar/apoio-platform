@@ -1,0 +1,11 @@
+package com.apoio.apoio_api.repository;
+
+import com.apoio.apoio_api.entity.UrbanProject;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.UUID;
+
+@Repository
+public interface UrbanProjectRepository extends JpaRepository<UUID, UrbanProject> {
+}
