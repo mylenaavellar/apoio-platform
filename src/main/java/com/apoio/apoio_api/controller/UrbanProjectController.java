@@ -13,7 +13,7 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/projects")
+@RequestMapping("/urban-projects")
 public class UrbanProjectController {
 
     private final UrbanProjectService urbanProjectService;
