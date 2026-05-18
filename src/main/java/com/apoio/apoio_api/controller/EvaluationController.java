@@ -4,6 +4,7 @@ import com.apoio.apoio_api.dto.evaluation.EvaluationRequest;
 import com.apoio.apoio_api.dto.evaluation.EvaluationResponse;
 import com.apoio.apoio_api.entity.Evaluation;
 import com.apoio.apoio_api.service.EvaluationService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +14,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/evaluations")
+@Tag(name = "Evaluations")
 public class EvaluationController {
 
     private final EvaluationService evaluationService;

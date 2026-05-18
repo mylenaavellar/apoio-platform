@@ -4,16 +4,17 @@ import com.apoio.apoio_api.dto.urbanproject.UrbanProjectRequest;
 import com.apoio.apoio_api.dto.urbanproject.UrbanProjectResponse;
 import com.apoio.apoio_api.entity.UrbanProject;
 import com.apoio.apoio_api.service.UrbanProjectService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/urban-projects")
+@Tag(name = "Urban Projects")
 public class UrbanProjectController {
 
     private final UrbanProjectService urbanProjectService;

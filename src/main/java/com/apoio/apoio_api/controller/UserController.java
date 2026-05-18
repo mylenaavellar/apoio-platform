@@ -4,16 +4,17 @@ import com.apoio.apoio_api.dto.user.UserRequest;
 import com.apoio.apoio_api.dto.user.UserResponse;
 import com.apoio.apoio_api.entity.User;
 import com.apoio.apoio_api.service.UserService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/users")
+@Tag(name = "Users")
 public class UserController {
 
     private final UserService userService;
