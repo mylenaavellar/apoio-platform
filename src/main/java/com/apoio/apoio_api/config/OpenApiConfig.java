@@ -16,8 +16,8 @@ public class OpenApiConfig {
                 .info(new Info()
                         .title("APOIO Platform - API Backend")
                         .version("1.0.0")
-                        .description("API REST do ecossistema APOIO (Avaliação Pós-Ocupação Integrada Orientada ao Urbanismo). "
-                                + "Plataforma para auditoria cidadã e diagnóstico multifatorial de espaços públicos.")
+                        .description("REST API for the APOIO ecosystem (Integrated Post-Occupancy Evaluation Oriented to Urbanism). "
+                                + "A platform for citizen auditing and multifactorial diagnosis of public spaces.")
                         .contact(new Contact()
                                 .name("Mylena Avellar")
                                 .email("mylenatavellar@gmail.com")
