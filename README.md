@@ -61,15 +61,26 @@ O sistema gerencia três pilares fundamentais, pensados sob medida para os conce
 ```
 git clone [https://github.com/seu-usuario/apoio-platform.git](https://github.com/seu-usuario/apoio-platform.git)
 ```
-### 2. Subir o banco de dados
+### 2. Subir a aplicação
 ```
-docker compose up -d
-```
-3. Executar a Aplicação Spring Boot
-```
-./mvnw spring-boot:run
+docker compose up --build
 ```
 A API estará disponível em http://localhost:8080.
+
+### Comandos úteis
+
+Subir em background:
+```
+docker compose up -d --build
+```
+Ver logs:
+```
+docker compose logs -f server
+```
+Parar:
+```
+docker compose down
+```
 
 ---
 
