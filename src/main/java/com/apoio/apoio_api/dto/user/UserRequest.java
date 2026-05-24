@@ -8,9 +8,8 @@ import java.util.UUID;
 // Incoming data used for entity creation or update
 public record UserRequest(
     String name,
-    String username,
-    String password,
     String email,
+    String password,
     String phone,
     String profession,
     LocalDate birthDate,
@@ -19,9 +18,8 @@ public record UserRequest(
     public User toEntity() {
         User user = new User();
         user.setName(name());
-        user.setUsername(username());
-        user.setPassword(password());
         user.setEmail(email());
+        user.setPassword(password());
         user.setPhone(phone());
         user.setProfession(profession());
         user.setBirthDate(birthDate());
